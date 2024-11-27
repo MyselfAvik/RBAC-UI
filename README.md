@@ -35,13 +35,12 @@ This dashboard is built using **React** (with JSX), styled with **Tailwind CSS**
     - **Assign Permissions:** Permissions can be granted or revoked to specific roles.
     - **Edit Permissions:** Modify permission names or attributes as necessary.
   
-### **Live Search Functionality**
+4. **Live Search Functionality**
 
 - The **live search** feature allows the admin to quickly search for users, roles, or permissions in real-time. As the admin types into the search bar, the list of users, roles, or permissions is automatically filtered to show only matching results.
 - This feature improves usability and efficiency, especially when dealing with large amounts of data.
 - The live search is applied to **users' names**, **emails**, and **roles**, and can be extended to other fields such as permissions or roles.
 
----
 
 5. **User Interface:**
     - Clean and responsive design, optimized for both desktop and mobile views.
