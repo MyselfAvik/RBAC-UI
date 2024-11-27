@@ -18,7 +18,7 @@ This dashboard is built using **React** (with JSX), styled with **Tailwind CSS**
 ## **Core Features**
 
 1. **User Management:**
-    - **View Users:** Display a list of users, showing their details such as name, email, and role.
+    - **View Users:** Display a list of users, showing their details such as name, email, role and status.
     - **Create User:** Admins can add new users with specific roles.
     - **Edit User:** Admins can update the details of existing users (e.g., update roles or user status).
     - **Delete User:** Admins can remove users from the system.
@@ -37,9 +37,9 @@ This dashboard is built using **React** (with JSX), styled with **Tailwind CSS**
   
 4. **Live Search Functionality**
 
-- The **live search** feature allows the admin to quickly search for users, roles, or permissions in real-time. As the admin types into the search bar, the list of users, roles, or permissions is automatically filtered to show only matching results.
-- This feature improves usability and efficiency, especially when dealing with large amounts of data.
-- The live search is applied to **users' names**, **emails**, and **roles**, and can be extended to other fields such as permissions or roles.
+    - The **live search** feature allows the admin to quickly search for users, roles, or permissions in real-time. As the admin types into the search bar, the         list of users, roles, or permissions is automatically filtered to show only matching results.
+    - This feature improves usability and efficiency, especially when dealing with large amounts of data.
+    - The live search is applied to **users' names**, **emails**, and **roles**, and can be extended to other fields such as permissions or roles.
 
 
 5. **User Interface:**
@@ -68,7 +68,7 @@ Ensure you have **Node.js** and **npm** installed. You can download Node.js from
 ### **1. Clone the Repository**
 ```bash
 git clone <repository-url>
-cd RBAC-Admin-Dashboard
+cd frontend
 ```
 
 ### **2. Install Dependencies**
@@ -107,7 +107,7 @@ This will start the app on `http://localhost:3000`.
 ├── /src                   # Source code
 │   ├── /components        # React components (Login, UserTable, RoleTable, etc.)
 │   ├── /assets            # Static assets (e.g., images, icons)
-│   ├── /styles            # Tailwind CSS and custom styles
+│   ├── /pages            # Pages Like Login page,Dashboard
 │   └── App.js             # Main React component
 ├── db.json                # Mock database for JSON Server (users, roles, permissions)
 ├── package.json           # Project metadata and dependencies
