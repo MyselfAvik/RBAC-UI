@@ -9,6 +9,7 @@ The **RBAC Admin Dashboard** is a simple yet functional Role-Based Access Contro
 - Assign roles to users.
 - Define and manage roles with permissions (e.g., Read, Write, Delete).
 - View and modify permissions associated with specific roles.
+- Live search functionality to quickly search through users, roles, or permissions in real-time.
 
 This dashboard is built using **React** (with JSX), styled with **Tailwind CSS**, and uses **JSON Server** for mock API simulation to handle CRUD operations on users, roles, and permissions.
 
@@ -33,6 +34,11 @@ This dashboard is built using **React** (with JSX), styled with **Tailwind CSS**
     - **View Permissions:** Admins can see the available permissions (e.g., Read, Write, Delete).
     - **Assign Permissions:** Permissions can be granted or revoked to specific roles.
     - **Edit Permissions:** Modify permission names or attributes as necessary.
+4.**Live Search Functionality:**
+
+    -**Search Users, Roles, and Permissions:** A real-time live search feature allows administrators to search for users, roles, or permissions as they type in a         search bar.
+    -**Instant Filtering:** The live search instantly filters through the data (such as users' names, email, or role) without having to reload the page, enhancing     the admin's ability to quickly find relevant entries.
+    -**User-Friendly:** The search bar is designed to be responsive and adaptive to different screen sizes.
   
 4. **User Interface:**
     - Clean and responsive design, optimized for both desktop and mobile views.
