@@ -1,0 +1,102 @@
+{
+  "users": [
+    {
+      "name": "Charlie Brown",
+      "email": "charlie.brown@example.com",
+      "role": "Admin",
+      "status": "Active",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "name": "Daisy Miller",
+      "email": "daisy.miller@example.com",
+      "role": "Admin",
+      "status": "Active"
+    },
+    {
+      "id": "5",
+      "name": "Eve Davis",
+      "email": "eve.davis@example.com",
+      "role": "Editor",
+      "status": "Active"
+    },
+    {
+      "id": "6",
+      "name": "Frank Thomas",
+      "email": "frank.thomas@example.com",
+      "role": "Viewer",
+      "status": "Active"
+    },
+    {
+      "id": "7",
+      "name": "Grace Hopper",
+      "email": "grace.hopper@example.com",
+      "role": "Admin",
+      "status": "Active"
+    },
+    {
+      "id": "8",
+      "name": "Hank Green",
+      "email": "hank.green@example.com",
+      "role": "Editor",
+      "status": "Inactive"
+    },
+    {
+      "id": "9",
+      "name": "Ivy Carter",
+      "email": "ivy.carter@example.com",
+      "role": "Viewer",
+      "status": "Active"
+    },
+    {
+      "id": "10",
+      "name": "Jack White",
+      "email": "jack.white@example.com",
+      "role": "Admin",
+      "status": "Active"
+    },
+    {
+      "id": "11",
+      "name": "Kara Danvers",
+      "email": "kara.danvers@example.com",
+      "role": "Editor",
+      "status": "Active"
+    },
+    {
+      "id": "12",
+      "name": "Leo King",
+      "email": "leo.king@example.com",
+      "role": "Viewer",
+      "status": "Active"
+    },
+    {
+      "id": "13",
+      "name": "Mia Wong",
+      "email": "mia.wong@example.com",
+      "role": "Admin",
+      "status": "Active"
+    },
+    {
+      "id": "14",
+      "name": "Noah Brown",
+      "email": "noah.brown@example.com",
+      "role": "Editor",
+      "status": "Inactive"
+    }
+  ],
+  "roles": {
+    "Admin": [
+      "Read",
+      "Write",
+      "Delete"
+    ],
+    "Editor": [
+      "Read",
+      "Write"
+    ],
+    "Viewer": [
+      "Read"
+    ]
+  }
+}
