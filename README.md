@@ -77,7 +77,7 @@ To run the mock API locally, follow these steps:
    ```
 2. Start the JSON Server with the provided `db.json` file:
    ```bash
-   json-server --watch db.json --port 5000
+   json-server --watch db.json --port 8000
    ```
 
 ### **4. Run the Application**
@@ -100,7 +100,6 @@ This will start the app on `http://localhost:3000`.
 │   ├── /components        # React components (Login, UserTable, RoleTable, etc.)
 │   ├── /assets            # Static assets (e.g., images, icons)
 │   ├── /styles            # Tailwind CSS and custom styles
-│   ├── /services          # API service to interact with JSON Server
 │   └── App.js             # Main React component
 ├── db.json                # Mock database for JSON Server (users, roles, permissions)
 ├── package.json           # Project metadata and dependencies
@@ -137,21 +136,6 @@ This will start the app on `http://localhost:3000`.
 
 ---
 
-## **Contributing**
-
-Feel free to fork this project and submit pull requests. If you'd like to contribute, please:
-
-1. Fork the repository.
-2. Create a new branch for your feature/bugfix.
-3. Submit a pull request with a clear description of the changes.
-
----
-
-## **License**
-
-This project is open-source and available under the [MIT License](LICENSE).
-
----
 
 ### **Conclusion**
 
