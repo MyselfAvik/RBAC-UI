@@ -11,10 +11,9 @@ const Table = () => {
   const [roles, setRoles] = useState({});
 
   useEffect(() => {
-    
     const fetchData = async () => {
       try {
-        const rolesResponse = await axios.get("http://localhost:8000/roles");
+        const rolesResponse = await axios.get("http://localhost:8000/roles/");
         setRoles(rolesResponse.data);
       } catch (error) {
         console.error(error);
@@ -22,22 +21,20 @@ const Table = () => {
     };
     fetchData();
   }, []);
-  
+
   useEffect(() => {
     axios
-      .get("http://localhost:8000/users")
+      .get("http://localhost:8000/users/")
       .then((res) => setData(res.data))
       .catch((er) => {
         console.log(er);
       });
   }, []);
 
- 
   const handleSave = (userId) => {
     const user = data.find((u) => u.id === userId);
     if (!user) return;
 
-    
     const newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Name cannot be empty.";
     if (!formData.email.trim()) {
@@ -54,22 +51,19 @@ const Table = () => {
 
     setErrors({});
 
-    
     const updatedData = { ...formData, status: user.status };
 
     axios
-      .put(`http://localhost:8000/users/${userId}`, updatedData)
+      .put(`http://localhost:8000/users/${userId}/`, updatedData)
       .then(() => {
-        
         setData((prevData) =>
           prevData.map((u) => (u.id === userId ? { ...u, ...updatedData } : u))
         );
-        setEditUserId(null); 
+        setEditUserId(null);
       })
       .catch((err) => console.error(err));
   };
 
-  
   const handleStatusChange = (userId) => {
     const user = data.find((u) => u.id === userId);
     if (!user) return;
@@ -83,28 +77,27 @@ const Table = () => {
     );
 
     axios
-      .patch(`http://localhost:8000/users/${userId}`, { status: updatedStatus })
+      .patch(`http://localhost:8000/users/${userId}/`, {
+        status: updatedStatus,
+      })
       .then(() => console.log(`Status updated for user ID ${userId}`))
       .catch((err) => console.error(err));
   };
 
-  
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:8000/users/${id}`)
+      .delete(`http://localhost:8000/users/${id}/`)
       .then(() =>
         setData((prevData) => prevData.filter((user) => user.id !== id))
       )
       .catch((er) => console.log(er));
   };
 
-  
   const handleEditClick = (user) => {
     setEditUserId(user.id);
     setFormData({ name: user.name, email: user.email, role: user.role });
   };
 
-  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });

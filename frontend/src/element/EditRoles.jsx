@@ -11,7 +11,7 @@ const EditRoles = ({ onClose }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/roles")
+      .get("http://localhost:8000/roles/")
       .then((res) => setRolesData(res.data))
       .catch((err) => {
         console.error("Failed to fetch roles data:", err);
@@ -53,7 +53,7 @@ const EditRoles = ({ onClose }) => {
     setEditMode(null);
 
     axios
-      .put("http://localhost:8000/roles", updatedRolesData)
+      .put("http://localhost:8000/roles/", updatedRolesData)
       .then(() => console.log("Permissions updated successfully"))
       .catch((err) => console.error("Failed to update permissions:", err));
   };
@@ -70,7 +70,7 @@ const EditRoles = ({ onClose }) => {
     setRolesData(updatedRolesData);
 
     axios
-      .put("http://localhost:8000/roles", updatedRolesData)
+      .put("http://localhost:8000/roles/", updatedRolesData)
       .then(() => console.log(`Role '${role}' deleted successfully`))
       .catch((err) => console.error(`Failed to delete role '${role}':`, err));
   };
