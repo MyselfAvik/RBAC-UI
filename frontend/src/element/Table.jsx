@@ -13,7 +13,7 @@ const Table = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const rolesResponse = await axios.get("http://localhost:8000/roles/");
+        const rolesResponse = await axios.get("http://localhost:8000/roles");
         setRoles(rolesResponse.data);
       } catch (error) {
         console.error(error);
@@ -24,7 +24,7 @@ const Table = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/users/")
+      .get("http://localhost:8000/users")
       .then((res) => setData(res.data))
       .catch((er) => {
         console.log(er);
@@ -54,7 +54,7 @@ const Table = () => {
     const updatedData = { ...formData, status: user.status };
 
     axios
-      .put(`http://localhost:8000/users/${userId}/`, updatedData)
+      .put(`http://localhost:8000/users/${userId}`, updatedData)
       .then(() => {
         setData((prevData) =>
           prevData.map((u) => (u.id === userId ? { ...u, ...updatedData } : u))
@@ -77,16 +77,14 @@ const Table = () => {
     );
 
     axios
-      .patch(`http://localhost:8000/users/${userId}/`, {
-        status: updatedStatus,
-      })
+      .patch(`http://localhost:8000/users/${userId}`, { status: updatedStatus })
       .then(() => console.log(`Status updated for user ID ${userId}`))
       .catch((err) => console.error(err));
   };
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:8000/users/${id}/`)
+      .delete(`http://localhost:8000/users/${id}`)
       .then(() =>
         setData((prevData) => prevData.filter((user) => user.id !== id))
       )

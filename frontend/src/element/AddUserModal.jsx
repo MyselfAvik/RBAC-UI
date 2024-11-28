@@ -13,14 +13,14 @@ const AddUserModal = ({ onClose }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/users/")
+      .get("http://localhost:8000/users")
       .then((res) => setData(res.data))
       .catch((er) => {
         console.log(er);
       });
 
     axios
-      .get("http://localhost:8000/roles/")
+      .get("http://localhost:8000/roles")
       .then((res) => setRoles(res.data))
       .catch((er) => {
         console.log("Failed to fetch roles data", er);
@@ -42,7 +42,7 @@ const AddUserModal = ({ onClose }) => {
     setError("");
     const id = data.length + 1;
     axios
-      .post("http://localhost:8000/users/", {
+      .post("http://localhost:8000/users", {
         id: id,
         name: name,
         email: email,

@@ -10,7 +10,7 @@ const AddRoles = ({ onClose }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/roles/")
+      .get("http://localhost:8000/roles")
       .then((res) => setRolesData(res.data))
       .catch((err) => console.error(err));
   }, []);
@@ -49,7 +49,7 @@ const AddRoles = ({ onClose }) => {
     setNewPermissions([]);
 
     axios
-      .put("http://localhost:8000/roles/", updatedRolesData)
+      .put("http://localhost:8000/roles", updatedRolesData)
       .then(() => console.log("Role added successfully"))
       .catch((err) => console.error("Failed to add role:", err));
   };
